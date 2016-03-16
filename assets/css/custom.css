@@ -1,0 +1,204 @@
+/*
+ *  Bootstrap overrides and app specific styles
+ * 
+ */
+body {
+	background: #E7E7E7;
+}
+hr {
+}
+header {
+	  position: relative;
+	  top: 0px;
+	  left: 0px;
+	  width: 100%;
+	  padding: 10px;
+	  /*border-bottom: 1px solid #ABABAB;*/
+	  margin-bottom: 10px;
+}
+hgroup > h1 {
+	font-size: 24px;
+	margin: 5px;
+}
+hgroup > h2 {
+	font-size: 16px;
+	margin: 5px;
+}
+#navigation {
+	margin-top: 10px;
+}
+/*#navigation + div {
+	background: #FFFFFF;
+}*/
+.nav-tabs {
+	border-bottom: 1px solid #FFFFFF;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover {
+	border: 1px solid #FFFFFF;
+}
+.tab-content {
+	background: #FFFFFF;
+	padding: 10px;
+}
+.app-menu > li > a > .label {
+  margin-left: 8px;
+}
+.api-listing, .api-detail {
+  height: 48px;
+  display: block;
+}
+.api-name, .api-component {
+  width: 48%;
+  text-align: right;
+}
+.api-name, a > .api-name, a.detail-link, .api-component {
+  display: inline-block;
+  float: left;
+}
+.alert-info {
+  padding: 8px 20px;
+  line-height: 35px;
+}
+a.detail-link
+{
+  font-weight: bold;
+  width: 48%;
+  text-align: center;
+  min-width: 80px;
+  font-size: 1.35em;
+}
+.api-status {
+  display: inline-block;
+  float: left;
+  padding-left: 12px;
+}
+.api-status > span > span.glyphicon {
+  margin-left: 8px;
+  top: 2px;
+}
+.api-status > span {
+  position: relative;
+  top: 5px;
+  font-size: 60%;
+}
+.active-status {
+  display: inline-block;
+  text-align: center;
+  width: 48%;
+  float: left;
+}
+.active-status > span.badge {
+  margin-top: 4px;
+}
+.separator {
+  display: inline-block;
+  float: left;
+  width: 1%;
+  border-left: 1px solid grey;
+  height: 100%;
+}
+.instruction {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  top: 22px;
+}
+.api-detail-wrapper > .detail-link > span.glyphicon {
+  float: left;
+  margin-left: 30px;
+  top: 3px;
+}
+.api-menu > .menu-wrapper > ul > li {
+  display: inline-block;
+  float: left;
+}
+.menu-wrapper > ul > li > a {
+  padding: 2px 22px;
+  margin: 4px 12px;
+  background-color: #eeeeee;
+  border: #E2E2E2 1px solid;
+}
+.api-menu {
+  width: 100%;
+  margin-top: 8px;
+  position: relative;
+  text-align: center;
+}
+.api-menu > .menu-wrapper {
+  width: 67%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+a.list-group-item {
+  height: 44px;
+}
+div.api-detail-wrapper > .container > .row > .panel > .panel-heading {
+  height: 44px;
+  font-weight: bold;
+}
+.name, .link {
+  width: 49%;
+  display: inline-block;
+  float: left;
+}
+nav.results-paginated {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.api-menu-list > li.active {
+  background-color: #ffffff;
+  border: #E2E2E2 1px solid;
+}
+table tr > td:nth-of-type(1) {
+	font-weight: bold;
+}
+.edit-visibility {
+  width: 96px;
+  height: 36px;
+}
+#content {
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding: 5px;
+}
+#content > div  > nav {
+  position: relative;
+  width: auto;
+  height: 48px;
+  margin: 10px;
+}
+.modal-container {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 35%;
+	height: auto;
+	min-width: 480px;
+	min-height: 200px;
+	padding: 10px;
+	margin: 5px;
+	background-color: #FFFFFF;
+}
+.model-content {
+	font-size: 14px;
+	font-weight: bold;
+	color: #0134C5;
+}
+.detail-view #edit-controls {
+	visibility: hidden;
+}
+.hidden-details {
+	display: none;
+}
+td.details-control {
+    background: url('../img/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../img/details_close.png') no-repeat center center;
+}

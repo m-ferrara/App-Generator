@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<div id="api-tab-api-detail-{{ id }}" data-tabname="Api {{id}}" data-taburl="api/{{id}}/details" data-tabid="ad{{ id }}" class="tab-pane active">
+  <div class="row col-sm-12 col-md-12 col-lg-12">
+    <div class="tab-content">
+      <div id="api-detail">
+        <div class="panel panel-default">
+          <div class="panel-heading"> Edit the Api's name, database and progress status.</div>
+          <nav>
+            <div class="col-sm-10">
+              <ul id="toggle-edit" class="nav nav-pills">
+                <li class="disabled"><a>Options</a></li>
+                <li class="separator"></li>
+                <li class="active"><a class="view">View</a></li>
+                <li><a class="edit">Edit</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-sm-12 col-md-12 col-lg-12">
+    <div class="clear"></div>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="name" class="control-label col-sm-2">name:</label>
+        <div class="col-sm-8">
+          <input id="name" type="text" name="name" value="{{ name }}" disabled class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="db_name" class="control-label col-sm-2">db_name:</label>
+        <div class="col-sm-8">
+          <input id="db_name" type="text" name="db_name" value="{{ db_name }}" disabled class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="status" class="control-label col-sm-2">status:</label>
+        <div class="col-sm-8">
+          <input id="status" type="number" name="status" value="{{ status }}" disabled class="form-control">
+        </div>
+      </div>
+      <div id="edit-controls">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 text-right">
+          <button type="button" class="btn btn-danger delete">Delete</button>
+          <button type="button" class="btn btn-success save-edit">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

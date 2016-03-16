@@ -1,0 +1,105 @@
+// Rest Maker ApiOverview.html
+html(lang="en")
+  head
+    link(rel='stylesheet', href='../../bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='../../css/custom.css')
+    script(src='../../script/libs/jquery.js')
+    script(src='../../bootstrap/js/bootstrap.js')
+  body
+    div.container
+      div.row.col-sm-12.col-md-12
+        h1  Rest Maker v1.0
+        h3.intro Create and Manage RESTful API Web-Services.
+        hr
+    div.container
+      div.row.col-sm-12.col-md-12
+        ul.app-menu.nav.nav-tabs(role="tablists")
+          li
+            a(href="#existing-api-list",role="tab",data-toggle="tab") Manage Existing API
+          li
+            a(href="#create-api",role="tab",data-toggle="tab") Create New API
+          li.active
+            a(href="#manage-api",role="tab",data-toggle="tab")
+              strong ApiName1
+              small.label.label-default
+                strong Editing
+    div.container
+      div.row.col-sm-12.col-md-12
+        div.tab-content
+          div#existing-api-list.tab-pane
+            div.row.col-sm-12.col-md-12.instruction
+              span.alert.alert-info Select an API from the list below to manage related Entities, Attributes and Endpoints.
+            div.row.col-sm-12.col-md-12
+              ul.existing-api-list.list-group
+                li.api-listing.list-group-item
+                  div.api-listing-wrapper
+                    a.detail-link(href="#ApiName1GoesHere")
+                      div.api-name ApiName1
+                      div.api-status
+                        span.label.label-primary In-Progress
+                          span.glyphicon.glyphicon-cog
+                    div.separator
+                    div.active-status
+                      span.badge.last-updated Last Updated: {{UpdatedDate}}
+                li.api-listing.list-group-item
+                  div.api-listing-wrapper
+                    a.detail-link(href="#ApiName2GoesHere")
+                      div.api-name ApiName2
+                      div.api-status
+                        span.label.label-success Complete
+                          span.glyphicon.glyphicon-check
+                    div.separator
+                    div.active-status
+                      span.badge.last-updated Last Updated: {{UpdatedDate}}
+                li.api-listing.list-group-item
+                  div.api-listing-wrapper
+                    a.detail-link(href="#ApiName3GoesHere")
+                      div.api-name ApiName3
+                      div.api-status
+                        span.label.label-warning New
+                          span.glyphicon.glyphicon-fire
+                    div.separator
+                    div.active-status
+                      span.badge.last-updated Last Updated: {{UpdatedDate}}
+          div#create-api.tab-pane
+            div.row.col-sm-12.col-md-12.instruction
+              span.alert.alert-info Enter new API name and related Database name.
+            div.row.col-sm-12.col-md-12
+              form(name="new-api",role="form")
+                div.form-group
+                  label(for="apiName") Name:
+                  input.form-control(type="text",name="apiName")
+                div.form-group
+                  label(for="apiDb") Database:
+                  input.form-control(type="text",name="apiDb")
+                div.form-group
+                  input.form-control(type="submit",value="Create API")
+          div#manage-api.tab-pane.active
+            div.row.col-sm-12.col-md-12.instruction
+              span.alert.alert-info Manage API Entities, Attributes and Endpoints.
+            div.row.col-sm-12.col-md-12
+              ul.api-menu-list.list-group
+                li.api-detail.list-group-item
+                  div.api-detail-wrapper
+                    a.detail-link(href="#Entities/ApiName1")
+                      div.api-component Entities
+                      span.glyphicon.glyphicon-th-list
+                    div.separator
+                    div.active-status
+                      span.badge.last-updated Last Updated: {{UpdatedDate}}
+                li.api-detail.list-group-item
+                  div.api-detail-wrapper
+                    a.detail-link(href="#Attributes/ApiName1")
+                      div.api-component Attributes
+                      span.glyphicon.glyphicon-tags
+                    div.separator
+                    div.active-status
+                      span.badge.last-updated Last Updated: {{UpdatedDate}}
+                li.api-detail.list-group-item
+                  div.api-detail-wrapper
+                    a.detail-link(href="#Endpoints/ApiName1")
+                      div.api-component Endpoints
+                      span.glyphicon.glyphicon-transfer
+                    div.separator
+                    div.active-status
+                      span.badge.last-updated Last Updated: {{UpdatedDate}}

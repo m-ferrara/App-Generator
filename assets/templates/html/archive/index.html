@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/custom.css">
+    <script src="../../script/libs/jquery.js"></script>
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row col-sm-12 col-md-12">
+        <h1> Rest Maker v1.0</h1>
+        <h3 class="intro">Create and Manage RESTful API Web-Services.</h3>
+        <hr>
+      </div>
+    </div>
+    <div id="navigation" class="container">
+      <div class="row col-sm-12 col-md-12">
+        <ul role="tablists" class="app-menu nav nav-tabs">
+          <li class="active"><a href="#existing-api-list" role="tab" data-toggle="tab">Manage Existing API</a></li>
+          <li><a href="#create-api" role="tab" data-toggle="tab">Create New API</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row col-sm-12 col-md-12">
+        <div id="content">
+          <div class="tab-content">
+            <div id="existing-api-list" class="active tab-pane">
+              <div class="row col-sm-12 col-md-12 instruction"><span class="alert alert-info">Select an API from the list below to manage related Entities, Attributes and Endpoints.</span></div>
+              <div class="row col-sm-12 col-md-12">
+                <ul class="existing-api-list list-group">
+                  <li class="api-listing list-group-item">
+                    <div class="api-listing-wrapper"><a href="#ApiName1GoesHere" class="detail-link">
+                        <div class="api-name">ApiName1</div>
+                        <div class="api-status"><span class="label label-primary">In-Progress<span class="glyphicon glyphicon-cog"></span></span></div></a>
+                      <div class="separator"></div>
+                      <div class="active-status"><span class="badge last-updated">Last Updated: {{UpdatedDate}}</span></div>
+                    </div>
+                  </li>
+                  <li class="api-listing list-group-item">
+                    <div class="api-listing-wrapper"><a href="#ApiName2GoesHere" class="detail-link">
+                        <div class="api-name">ApiName2</div>
+                        <div class="api-status"><span class="label label-success">Complete<span class="glyphicon glyphicon-check"></span></span></div></a>
+                      <div class="separator"></div>
+                      <div class="active-status"><span class="badge last-updated">Last Updated: {{UpdatedDate}}</span></div>
+                    </div>
+                  </li>
+                  <li class="api-listing list-group-item">
+                    <div class="api-listing-wrapper"><a href="#ApiName3GoesHere" class="detail-link">
+                        <div class="api-name">ApiName3</div>
+                        <div class="api-status"><span class="label label-warning">New<span class="glyphicon glyphicon-fire"></span></span></div></a>
+                      <div class="separator"></div>
+                      <div class="active-status"><span class="badge last-updated">Last Updated: {{UpdatedDate}}</span></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="create-api" class="tab-pane">
+              <div class="row col-sm-12 col-md-12 instruction"><span class="alert alert-info">Enter new API name and related Database name.</span></div>
+              <div class="row col-sm-12 col-md-12">
+                <form name="new-api" role="form">
+                  <div class="form-group">
+                    <label for="apiName">Name:</label>
+                    <input type="text" name="apiName" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="apiDb">Database:</label>
+                    <input type="text" name="apiDb" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Create API" class="form-control">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

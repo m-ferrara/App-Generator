@@ -1,0 +1,58 @@
+
+<!-- _layout.jade acts as wrapper containing header-footer -->
+<!--              static elements of the view.-->
+<!-- Rest Maker EntityDetail.html-->
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/custom.css"/>
+    <script src="../../script/libs/jquery.js"></script>
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row col-sm-12 col-md-12">
+        <h2> Rest Maker v1.0</h2>
+        <h4 class="intro">Create and Manage RESTful API Web-Services.</h4>
+        <hr/>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row col-sm-12 col-md-12">
+        <ul role="tablists" class="app-menu nav nav-tabs">
+          <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row col-sm-12 col-md-12">
+        <div class="tab-content">
+          <div id="home" class="tab-pane active">
+            <div class="row col-sm-12 col-md-12 instruction"><span class="alert alert-info">Select an API from the list below to manage related Entities, Attributes and Endpoints.</span></div>
+            <div class="row col-sm-12 col-md-12"><!-- Handlebars iterate through existing Apis, if none, display Add Api link. -->
+              <ul class="existing-api-list list-group">
+                {{#if existingApis.length > 0}}
+                {{#each existingApis}}
+                <li class="api-listing list-group-item">
+                  <div class="api-listing-wrapper"><a href="#Apis/{{Id}}" class="detail-link">
+                      <div class="api-name">{{Name}}</div>
+                      <div class="api-status"><span class="label label-primary">{{#ProgressText}}</span><span class="glyphicon glyphicon-cog"></span></div></a></div>
+                </li>
+                <div class="separator"></div>{{else}}
+                <li>
+                  <p class="get-started"> Get started now!</p>
+                </li>{{/if}}
+                <li>fuck da police</li>
+              </ul>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row col-sm-12 col-md-12">
+              <p class="text-center">API/Rest Maker Footer 2015</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

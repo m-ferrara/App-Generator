@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<div id="attribute-detail" class="detail-view">
+  <nav>
+    <div class="col-sm-10">
+      <ul id="toggle-edit" class="nav nav-pills">
+        <li class="disabled"><a>Options</a></li>
+        <li class="separator"></li>
+        <li class="active"><a class="view">View</a></li>
+        <li><a class="edit">Edit</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="clear"></div>
+  <div class="form-horizontal">
+    <div class="form-group">
+      <label for="name" class="control-label col-sm-2">name:</label>
+      <div class="col-sm-8">
+        <input id="name" type="text" name="name" value="{{ name }}" disabled class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="type" class="control-label col-sm-2">type:</label>
+      <div class="col-sm-8">
+        <input id="type" type="text" name="type" value="{{ type }}" disabled class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="length" class="control-label col-sm-2">length:</label>
+      <div class="col-sm-8">
+        <input id="length" type="text" name="length" value="{{ length }}" disabled class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="regex" class="control-label col-sm-2">regex:</label>
+      <div class="col-sm-8">
+        <input id="regex" type="text" name="regex" value="{{ regex_pattern }}" disabled class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-2"></div>
+      <div class="checkbox col-sm-8">
+        <label for="primary-key">
+          <input id="is_primary_key" name="is_primary_key" type="checkbox" {{ checked is_primary_key }} disabled>is primary key:
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-2"></div>
+      <div class="checkbox col-sm-8">
+        <label for="unique">
+          <input id="is_unique" name="is_unique" type="checkbox" {{ checked is_unique }} disabled>is unique:
+        </label>
+      </div>
+    </div>
+    <div id="edit-controls">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8 text-right">
+        <button type="button" class="btn btn-danger delete">Delete</button>
+        <button type="button" class="btn btn-success save-edit">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

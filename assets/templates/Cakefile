@@ -1,0 +1,24 @@
+# cakefile ~ define tasks for compiling jade and handlebars
+{exec} = require 'child_process'
+
+task 'jade:compile', 'compile jade templates from /jade to /html, and handlebars compile to templates.js', ->
+  exec 'jade jade -o -p html', (err, stdout, stderr) ->
+      err && throw err
+      console.log 'Jade templates compiled!'
+      invoke 'handlebars:compile'
+
+task 'handlebars:compile', 'compile Handlebars templates', ->
+  exec 'handlebars html -f templates.js', (err, stdout, stderr) ->
+      err && throw err
+      console.log 'Handlebars compiled!'
+
+task 'jade:watch', 'watch dir for changes to compile jade templates in /jade to /html', ->
+  console.log '**Watching on /jade directory, updates compile to /html directory**'
+  console.log '**handlebars watching /html for updates, compiles to templates.js file**'
+  exec 'jade "jade" -w -P -o html ', (err, stdout, stderr) ->
+    err && throw err
+    invoke 'handlebars:watch'
+
+task 'handlebars:watch', 'watch html directory for updates, compile to templates.js', ->
+  exec 'handlebar-rider -w -i html -e ".html" -f templates.js', (err, stdout, stderr) ->
+    err && throw err

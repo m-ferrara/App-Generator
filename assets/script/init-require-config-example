@@ -1,0 +1,28 @@
+require.config({
+
+  paths: {
+    jquery: 'vendor/jquery-2.0.2.min',
+    underscore: 'vendor/underscore-1.5.2.min',
+    backbone: 'vendor/backbone-1.0.0.min',
+    'unique_name': 'vendor/backbone.epoxy-1.0.2.min', // the name could have been 'Backbone.Epoxy', but left in this way to show that the name doesn't effect the way you use it in your code
+    bootstrap: 'vendor/bootstrap-3.min'
+  },
+
+  shim: {
+    underscore: {
+      exports: '_'
+    },
+    backbone: {
+      deps: ['underscore', 'jquery'],
+      exports: 'Backbone'
+    },
+    bootstrap: {
+        deps: ['jquery']
+    }
+  }
+});
+
+require(['jquery', 'underscore', 'backbone', 'bootstrap','unique_name'], function($, _, Backbone, bootstrap)
+{
+    console.log(Backbone.Epoxy);
+}

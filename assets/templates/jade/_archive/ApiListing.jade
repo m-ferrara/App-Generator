@@ -1,0 +1,12 @@
+doctype html
+#api-listing
+.panel.panel-default
+  .panel-heading  Select to view or edit items listed below
+table.table
+  |{{#each this}}
+  tr
+    td
+      a.item-view-link(href="#api/{{ id }}")  {{ name }}
+    td
+      a.item-edit-link(href="#api/{{ id }}/edit")  Edit
+  |{{/each}}

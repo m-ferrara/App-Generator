@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<div id="api-tab-api-overview-{{ id }}" data-tabname="Manage Api {{name}}" data-taburl="api/{{id}}/overview" data-tabid="ao{{ id }}" class="container tab-pane active">
+  <div class="row col-sm-12 col-md-12 col-lg-12">
+    <div class="tab-content">
+      <div id="existing-api-list">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="alert alert-info">Manage API Entities, Attributes and Endpoints.</span></div>
+          <div class="row col-sm-12 col-md-12">
+            <ul class="api-menu-list list-group">
+              <li class="api-detail list-group-item">
+                <div class="api-detail-wrapper"><a href="#api/{{id}}/Entities" class="detail-link">
+                    <div class="api-component">Entities</div><span class="glyphicon glyphicon-th-list"></span></a>
+                  <div class="separator"></div>
+                  <div class="active-status"><span class="badge last-updated">Last Updated: {{UpdatedDate}}</span></div>
+                </div>
+              </li>
+              <li class="api-detail list-group-item">
+                <div class="api-detail-wrapper"><a href="#api/{{id}}/Attributes" class="detail-link">
+                    <div class="api-component">Attributes</div><span class="glyphicon glyphicon-tags"></span></a>
+                  <div class="separator"></div>
+                  <div class="active-status"><span class="badge last-updated">Last Updated: {{UpdatedDate}}</span></div>
+                </div>
+              </li>
+              <li class="api-detail list-group-item">
+                <div class="api-detail-wrapper"><a href="#api/{{id}}/Endpoints" class="detail-link">
+                    <div class="api-component">Endpoints</div><span class="glyphicon glyphicon-transfer"></span></a>
+                  <div class="separator"></div>
+                  <div class="active-status"><span class="badge last-updated">Last Updated: {{UpdatedDate}}</span></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

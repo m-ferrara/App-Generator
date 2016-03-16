@@ -1,0 +1,37 @@
+doctype html
+div(id="api-tab-api-detail-{{ id }}",data-tabname="Api {{id}}",data-taburl="api/{{id}}/details",data-tabid="ad{{ id }}").tab-pane.active
+  div.row.col-sm-12.col-md-12.col-lg-12
+      div.tab-content
+        div#api-detail
+          .panel.panel-default
+            .panel-heading  Edit the Api's name, database and progress status.
+            nav
+              .col-sm-10
+                ul#toggle-edit.nav.nav-pills
+                  li.disabled
+                    a Options
+                  li.separator
+                  li.active
+                    a.view View
+                  li
+                    a.edit Edit
+  div.row.col-sm-12.col-md-12.col-lg-12
+    .clear
+    .form-horizontal
+      .form-group
+        label.control-label.col-sm-2(for="name") name:
+        .col-sm-8
+          input#name.form-control(type="text",name="name",value="{{ name }}",disabled)
+      .form-group
+        label.control-label.col-sm-2(for="db_name") db_name:
+        .col-sm-8
+          input#db_name.form-control(type="text",name="db_name",value="{{ db_name }}",disabled)
+      .form-group
+        label.control-label.col-sm-2(for="status") status:
+        .col-sm-8
+          input#status.form-control(type="number",name="status",value="{{ status }}",disabled)
+      #edit-controls
+        .col-sm-2
+        .col-sm-8.text-right
+          button.btn.btn-danger.delete(type="button") Delete
+          button.btn.btn-success.save-edit(type="button") Save

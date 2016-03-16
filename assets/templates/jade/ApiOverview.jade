@@ -1,0 +1,34 @@
+doctype html
+div(id="api-tab-api-overview-{{ id }}",data-tabname="Manage Api {{name}}",data-taburl="api/{{id}}/overview",data-tabid="ao{{ id }}").container.tab-pane.active
+  div.row.col-sm-12.col-md-12.col-lg-12
+      div.tab-content
+        div#existing-api-list
+          .panel.panel-default
+            .panel-heading
+              span.alert.alert-info Manage API Entities, Attributes and Endpoints.
+            div.row.col-sm-12.col-md-12
+              ul.api-menu-list.list-group
+                li.api-detail.list-group-item
+                  div.api-detail-wrapper
+                    a.detail-link(href="#api/{{id}}/Entities")
+                      div.api-component Entities
+                      span.glyphicon.glyphicon-th-list
+                    div.separator
+                    div.active-status
+                      span.badge.last-updated Last Updated: {{UpdatedDate}}
+                li.api-detail.list-group-item
+                  div.api-detail-wrapper
+                    a.detail-link(href="#api/{{id}}/Attributes")
+                      div.api-component Attributes
+                      span.glyphicon.glyphicon-tags
+                    div.separator
+                    div.active-status
+                      span.badge.last-updated Last Updated: {{UpdatedDate}}
+                li.api-detail.list-group-item
+                  div.api-detail-wrapper
+                    a.detail-link(href="#api/{{id}}/Endpoints")
+                      div.api-component Endpoints
+                      span.glyphicon.glyphicon-transfer
+                    div.separator
+                    div.active-status
+                      span.badge.last-updated Last Updated: {{UpdatedDate}}

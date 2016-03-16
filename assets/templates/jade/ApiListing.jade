@@ -1,0 +1,17 @@
+doctype html
+#api-tab-existing-apis.tab-pane.active(data-tabname="Existing Apis",data-taburl="apis",data-tabid="apis")
+  div.row.col-sm-12.col-md-12.col-lg-12
+      div.tab-content
+        div#existing-api-list
+          .panel.panel-default
+            .panel-heading  Select to view or edit items listed below
+          table.table.table-striped
+            |{{#each this}}
+            tr
+              td
+                {{ name }}
+              td
+                a.item-view-link(href="#api/{{ id }}/manage")  Manage
+              td
+                a.item-edit-link(href="#api/{{ id }}/detail")  Details/Edit
+            |{{/each}}

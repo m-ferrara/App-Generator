@@ -1,0 +1,57 @@
+doctype html
+html(lang="en")
+  head
+    link(rel='stylesheet', href='../../bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='../../css/custom.css')
+  body
+    div.container
+      div.row.col-sm-12.col-md-12
+        h1  App-Generator v1.0
+        h3.intro Create and Manage RESTful API Web-Services.
+        hr
+    div#navigation.container
+      div.row.col-sm-12.col-md-12.col-lg-12
+        ul.app-menu.nav.nav-tabs(role="tablists")
+          li.active
+            a(href="#aps",role="tab",data-toggle="tab") Existing APIs
+          li
+            a(href="#api\create",role="tab",data-toggle="tab") Create New API
+    div.container
+      div.row.col-sm-12.col-md-12.col-lg-12
+        #content
+          div.tab-content
+            div#existing-api-list.active.tab-pane
+              div.row.col-sm-12.col-md-12.col-lg-12.instruction
+                //- span.alert.alert-info Select an API from the list below to manage related Entities, Attributes and Endpoints.
+              div.row.col-sm-12.col-md-12.col-lg-12
+                ul.existing-api-list.list-group
+                  li.api-listing.list-group-item
+                    div.api-listing-wrapper
+                      a.detail-link(href!="#api/1")
+                        div.api-name ApiName1
+                        div.api-status
+                          span.label.label-primary In-Progress
+                            span.glyphicon.glyphicon-cog
+                      div.separator
+                      div.active-status
+                        span.badge.last-updated Last Updated: {{UpdatedDate}}
+                  li.api-listing.list-group-item
+                    div.api-listing-wrapper
+                      a.detail-link(href!="#api/2")
+                        div.api-name ApiName2
+                        div.api-status
+                          span.label.label-success Complete
+                            span.glyphicon.glyphicon-check
+                      div.separator
+                      div.active-status
+                        span.badge.last-updated Last Updated: {{UpdatedDate}}
+                  li.api-listing.list-group-item
+                    div.api-listing-wrapper
+                      a.detail-link(href!="#api/3")
+                        div.api-name ApiName3
+                        div.api-status
+                          span.label.label-warning New
+                            span.glyphicon.glyphicon-fire
+                      div.separator
+                      div.active-status
+                        span.badge.last-updated Last Updated: {{UpdatedDate}}

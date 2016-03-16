@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<div id="attribute-listing"></div>
+<div class="panel panel-default">
+  <div class="panel-heading"> Select to view or edit items listed below</div>
+</div>
+<table class="table">{{#each this}}
+  <tr>
+    <td><a href="#attribute/{{ id }}" class="item-view-link"> {{ name }}</a></td>
+    <td><a href="#attribute/{{ id }}/edit" class="item-edit-link"> Edit</a></td>
+  </tr>{{/each}}
+</table>

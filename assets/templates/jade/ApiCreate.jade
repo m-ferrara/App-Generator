@@ -1,0 +1,23 @@
+doctype html
+#api-tab-api-create.tab-pane.active
+  div.row.col-sm-12.col-md-12.col-lg-12
+      div.tab-content
+        #api-create.create-view
+          .clear
+          .panel.panel-default
+            .panel-heading  Create new Api by completing all fields below and clicking the Save button
+          .form-horizontal
+            .form-group
+              label.control-label.col-sm-2(for="name") Name:
+              .col-sm-8
+                input#name.form-control(type="text",name="name",placeholder="API Name Goes Here...")
+            .form-group
+              label.control-label.col-sm-2(for="db_name") Database name:
+              .col-sm-8
+                input#db_name.form-control(type="text",name="db_name",placeholder="Database Name Goes Here...")
+                input#status.form-control(type="hidden",name="status",value="0")
+            #edit-controls
+              .col-sm-2
+              .col-sm-8.text-right
+                button.btn.btn-danger.delete(type="reset") Reset
+                button.btn.btn-success.save-edit(type="button") Save

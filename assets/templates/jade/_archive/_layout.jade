@@ -1,0 +1,106 @@
+// _layout.jade acts as wrapper containing header-footer 
+//              static elements of the view.
+// Rest Maker EntityDetail.html
+html(lang="en")
+  head
+    link(rel='stylesheet', href='../../bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='../../css/custom.css')
+    script(src='../../script/libs/jquery.js')
+    script(src='../../bootstrap/js/bootstrap.js')
+  body
+    div.container
+      div.row.col-sm-12.col-md-12
+        h2  Rest Maker v1.0
+        h4.intro Create and Manage RESTful API Web-Services.
+        hr
+    div.container
+      div.row.col-sm-12.col-md-12
+        ul.app-menu.nav.nav-tabs(role="tablists")
+          //- li.active
+          //-   a(href="#manage-api",role="tab",data-toggle="tab")
+          //-     strong ApiName1
+          //-     small.label.label-default
+          //-       strong Editing
+          li.active
+            a(href="#home",role="tab",data-toggle="tab") Home
+    //- div.container
+    //-   div.row.col-sm-12.col-md-12.api-menu
+    //-     div.menu-wrapper
+    //-       ul.nav.nav-pills(role="tablists")
+    //-         li
+    //-           a(href="#entities",role="tab",data-toggle="tab") Entities
+    //-         li
+    //-           a(href="#attributes",role="tab",data-toggle="tab") Attributes
+    //-         li.active
+    //-           a(href="#endpoints",role="tab",data-toggle="tab") Endpoints
+    div.container
+      div.row.col-sm-12.col-md-12
+        div.tab-content
+          div#home.tab-pane.active
+            div.row.col-sm-12.col-md-12.instruction
+              span.alert.alert-info Select an API from the list below to manage related Entities, Attributes and Endpoints.
+            div.row.col-sm-12.col-md-12
+              <!-- Handlebars iterate through existing Apis, if none, display Add Api link. -->
+              ul.existing-api-list.list-group
+                {{#if existingApis.length > 0}}
+                {{#each existingApis}}
+                li.api-listing.list-group-item
+                  div.api-listing-wrapper
+                    a.detail-link(href="#Apis/{{Id}}")
+                      div.api-name {{Name}}
+                      div.api-status
+                        span.label.label-primary {{#ProgressText}}
+                        span.glyphicon.glyphicon-cog
+                div.separator
+                {{else}}
+                li
+                  p.get-started  Get started now!
+                {{/if}}
+                li fuck da police
+                //- li.api-listing.list-group-item
+                //-   div.api-listing-wrapper
+                //-     a.detail-link(href="#ApiName1GoesHere")
+                //-       div.api-name ApiName1
+                //-       div.api-status
+                //-         span.label.label-primary In-Progress
+                //-           span.glyphicon.glyphicon-cog
+                //-     div.separator
+                //-     div.active-status
+                //-       span.badge.last-updated Last Updated: {{UpdatedDate}}
+                //- li.api-listing.list-group-item
+                //-   div.api-listing-wrapper
+                //-     a.detail-link(href="#ApiName2GoesHere")
+                //-       div.api-name ApiName2
+                //-       div.api-status
+                //-         span.label.label-success Complete
+                //-           span.glyphicon.glyphicon-check
+                //-     div.separator
+                //-     div.active-status
+                //-       span.badge.last-updated Last Updated: {{UpdatedDate}}
+                //- li.api-listing.list-group-item
+                //-   div.api-listing-wrapper
+                //-     a.detail-link(href="#ApiName3GoesHere")
+                //-       div.api-name ApiName3
+                //-       div.api-status
+                //-         span.label.label-warning New
+                //-           span.glyphicon.glyphicon-fire
+                //-     div.separator
+                //-     div.active-status
+                //-       span.badge.last-updated Last Updated: {{UpdatedDate}}
+          div.container
+            div.row.col-sm-12.col-md-12
+              p.text-center API/Rest Maker Footer 2015
+              //- nav.results-paginated
+              //-   ul.pagination
+              //-     li
+              //-       a(href="#") &lt;&lt;
+              //-     li
+              //-       a(href="#") 1
+              //-     li
+              //-       a(href="#") 2
+              //-     li
+              //-       a(href="#") 3
+              //-     li
+              //-       a(href="#") 4
+              //-     li
+              //-       a(href="#") &gt;&gt;

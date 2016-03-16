@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/custom.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row col-sm-12 col-md-12">
+        <h1> App-Generator v1.0</h1>
+        <h3 class="intro">Create and Manage RESTful API Web-Services.</h3>
+        <hr>
+      </div>
+    </div>
+    <div id="navigation" class="container">
+      <div class="row col-sm-12 col-md-12 col-lg-12">
+        <ul role="tablists" class="app-menu nav nav-tabs">
+          <li class="active"><a href="#aps" role="tab" data-toggle="tab">Existing APIs</a></li>
+          <li><a href="#apicreate" role="tab" data-toggle="tab">Create New API</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row col-sm-12 col-md-12 col-lg-12">
+        <div id="content">
+          <div class="tab-content">
+            <div id="existing-api-list" class="active tab-pane">
+              <div class="row col-sm-12 col-md-12 col-lg-12 instruction">
+              </div>
+              <div class="row col-sm-12 col-md-12 col-lg-12">
+                <ul class="existing-api-list list-group">
+                  <li class="api-listing list-group-item">
+                    <div class="api-listing-wrapper"><a href="#api" class="detail-link">
+                        <div class="api-name">ApiName1</div>
+                        <div class="api-status"><span class="label label-primary">In-Progress<span class="glyphicon glyphicon-cog"></span></span></div></a>
+                      <div class="separator"></div>
+                      <div class="active-status"><span class="badge last-updated">Last Updated: {{UpdatedDate}}</span></div>
+                    </div>
+                  </li>
+                  <li class="api-listing list-group-item">
+                    <div class="api-listing-wrapper"><a href="#api" class="detail-link">
+                        <div class="api-name">ApiName2</div>
+                        <div class="api-status"><span class="label label-success">Complete<span class="glyphicon glyphicon-check"></span></span></div></a>
+                      <div class="separator"></div>
+                      <div class="active-status"><span class="badge last-updated">Last Updated: {{UpdatedDate}}</span></div>
+                    </div>
+                  </li>
+                  <li class="api-listing list-group-item">
+                    <div class="api-listing-wrapper"><a href="#api" class="detail-link">
+                        <div class="api-name">ApiName3</div>
+                        <div class="api-status"><span class="label label-warning">New<span class="glyphicon glyphicon-fire"></span></span></div></a>
+                      <div class="separator"></div>
+                      <div class="active-status"><span class="badge last-updated">Last Updated: {{UpdatedDate}}</span></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

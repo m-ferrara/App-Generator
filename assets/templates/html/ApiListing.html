@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<div id="api-tab-existing-apis" data-tabname="Existing Apis" data-taburl="apis" data-tabid="apis" class="tab-pane active">
+  <div class="row col-sm-12 col-md-12 col-lg-12">
+    <div class="tab-content">
+      <div id="existing-api-list">
+        <div class="panel panel-default">
+          <div class="panel-heading"> Select to view or edit items listed below</div>
+        </div>
+        <table class="table table-striped">{{#each this}}
+          <tr>
+            <td>{{ name }}</td>
+            <td><a href="#api/{{ id }}/manage" class="item-view-link"> Manage</a></td>
+            <td><a href="#api/{{ id }}/detail" class="item-edit-link"> Details/Edit</a></td>
+          </tr>{{/each}}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

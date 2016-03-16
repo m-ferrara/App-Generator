@@ -1,0 +1,35 @@
+doctype html
+head
+  link(rel="stylesheet",href="../assets/bootstrap/css/bootstrap.css")
+  link(rel="stylesheet",href="../assets/css/custom.css")
+  script(data-main="../assets/js/tests-init",type="text/javascript",src="../assets/script/libs/require.js")
+body
+  .container
+    .row
+      .col-sm-12.col-md-12.col-lg-12
+        header
+          h1  Web Service Test Reporting
+          h2  Run test requests to determine functional status
+    //- .row
+    //-   .col-sm-12.col-md-12.col-lg-12
+    //-     input#secret(type="text")
+    //-     div#run-tests(type="button").btn.btn-default
+    .row
+      .col-sm-12.col-md-12.col-lg-12
+        table#all-results.table
+          tr
+            th Pass/Fail 
+            th %
+          tr
+            td Passed
+            td.passed-tests 
+          tr
+            td FAILED
+            td.failed-tests   
+    .row
+      .col-sm-12.col-md-12.col-lg-12
+        table#results.table
+          tr
+            th Entity (Resource)
+            th Method
+            th Successful
